@@ -1,4 +1,6 @@
-`use strict`(() => {
+
+(() => {
+  `use strict`
   //Documento ciudades de js que consta de:
   //Menu
   //Tabs
@@ -32,6 +34,7 @@
 
   tabsButton.forEach((earchButton, i) => {
     tabsButton[i].addEventListener(`click`, () => {
+
       tabsContent.forEach((eachContent, i) => {
         tabsContent[i].classList.remove(`isActive`);
       });
@@ -45,4 +48,5 @@
       tabsButton[i].classList.add(`isActive`);
     });
   });
+
 })();

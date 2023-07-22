@@ -1,6 +1,7 @@
-"use strict";
 
 (() => {
+
+  "use strict";
   //Documento ciudades de js que consta de:
   //Menu
   //Slider completo (imagen y texto)

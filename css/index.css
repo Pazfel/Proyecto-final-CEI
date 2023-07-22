@@ -792,7 +792,7 @@ body {
     display: none;
   }
   .Header-nav.isActive {
-    display: b;
+    display: block;
   }
   .Header-ul {
     /* display: none; */
@@ -806,7 +806,8 @@ body {
   }
   .Header-button {
     display: block;
-    width: 3rem;
+    width: 2rem;
+    margin-left: 3rem;
     color: var(--coralcolor);
   }
   .Header-wrapper {
@@ -966,7 +967,7 @@ body {
     flex-direction: column;
   }
   .Footer-text {
-    font-size: 8rem;
+    font-size: .8rem;
     left: 0;
     bottom: 0;
   }
