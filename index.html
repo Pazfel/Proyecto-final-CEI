@@ -1,0 +1,397 @@
+<!-- Descripción: Este es el index de mi página web HTML donde se muestra el contenido principal.
+Estructura general:
+--Header
+-Barra de navegación
+-Contenido princial    
+    Slider - Grid - Testimonios
+-Footer o pie de página -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tripguau</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Ubuntu:wght@300;400;500&family=Work+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+    <script src="js/index.js" defer></script> 
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <!-- Primary Meta Tags -->
+    <title>Tripguau - Pasea con tu mascota por España</title>
+    <meta name="title" content="Tripguau - Pasea con tu mascota por España" />
+    <meta name="description" content="Ciudades de España para viajar con toda tu familia incluyendo tus mascotas y toda la información que necesitas para hacer de tu viaje una experiencia increíble." />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://metatags.io" />
+    <meta property="og:title" content="Tripguau - Pasea con tu mascota por España" />
+    <meta property="og:description" content="Ciudades de España para viajar con toda tu familia incluyendo tus mascotas y toda la información que necesitas para hacer de tu viaje una experiencia increíble." />
+    <meta property="og:image" content="https://metatags.io/images/meta-tags.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://metatags.io" />
+    <meta property="twitter:title" content="Tripguau - Pasea con tu mascota por España" />
+    <meta property="twitter:description" content="Ciudades de España para viajar con toda tu familia incluyendo tus mascotas y toda la información que necesitas para hacer de tu viaje una experiencia increíble." />
+    <meta property="twitter:image" content="https://metatags.io/images/meta-tags.png" />
+    <!-- Meta Tags Generated with https://metatags.io -->
+</head>
+<body>
+<!-- Inicio del main de la web donde se desarrolla el contenido principal de esta. -->
+    <main class="Main">
+<!--Header y menú de navegación como primera estructura de la web. -->
+        <header class="Header">
+            
+            <div class="Header-wrapper">
+                <button class="Header-button" title="Logo de la página">
+                    <svg class="Header-svg" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                    </svg>
+                </button>
+                <h1 class="Header-h1">
+                    <a class="Header-a" href="index.html" title="Redirige al home de la web">
+                        <span class="Header-title">Trip<span class="Header-title Header-title--part ">guau</span>
+                        </span>
+                        <img class="Header-img" src="assets/Logo_0.webp" alt="Huella de un perrito">
+                    </a>
+                </h1>
+<!-- Class isActive cuando se ejecuta con JS hace que cuando se hace responsive aparece y desaparece al hacer click -->
+                <nav class="Header-nav">
+                    <ul class="Header-ul">
+                        <li class="Header-li">
+<!-- Se agregan ID en el href para hacer scroll behavior smooth dentro de la misma página. -->
+                            <a class="Header-link" href="#Galeria" title="Dirige a la seccion del Slider de la web">Galeria</a>
+                            </li>
+                        <li class="Header-li">
+                            <a class="Header-link" href="#Ciudades" title="Dirige a la seccion del Grid de la web">Ciudades</a>
+                        </li>
+                        <li class="Header-li">
+                            <a class="Header-link" href="#Comparte" title="Dirige a la seccion de Testimonios de la web">Comparte</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+    <!-- Sección Slider, se muestra una galería de fotos pet-friendly en diferentes lugres de España a modo de introducción y cercanía con el usuario.  -->
+        <div class="Slider" id="Galeria">
+            <div class="Slider-wrapper">
+                <div class="Slider-diapositiva Slider-static isActive">
+<!-- Se les agrega a las imágenes loading lazy ya que no aparecen inmediantamente cuando se carga lapágina y asi optimizamos el rendimiento de la web. -->
+<!-- Se agregan dos clases mas para hacer que desde la primera foto parta el slider y cuando hagamos JS se considere la primera como el inicio del forEach -->
+                    <img class="Slider-img " src="assets/Slider-LagoCovadonga.jpg" alt="Perro en el puerto de Cantabria">
+                    <span class="Slider-title isActive">Lago Covadonga</span>
+                </div>
+                <div class="Slider-diapositiva">
+                    <img class="Slider-img" src="assets/Slider-cantabria.webp" alt="Perro en el lago Covadonga" loading="lazy">
+                    <span class="Slider-title">Cantabria</span>
+                </div>   
+                <div class="Slider-diapositiva">
+                    <img class="Slider-img" src="assets/Slider_rutadelcares11.webp" alt="Perro en las montañas" loading="lazy">
+                    <span class="Slider-title">Ruta del Cares</span>
+                </div>  
+                <div class="Slider-diapositiva">
+                    <img class="Slider-img" src="assets/Slider_Madrid.webp" alt="Pareja de amigas con perros en Madrid" loading="lazy">
+                    <span class="Slider-title">Palacio Real Madrid</span>
+                </div>
+                <div class="Slider-diapositiva">
+                    <img class="Slider-img" src="assets/Slider_Mallorca.webp" alt="Dueño con su perro en las rocas de Mallorca" loading="lazy">
+                    <span class="Slider-title">Mallorca</span>
+                </div>
+            </div>
+<!-- Botones para darles funcionalidad con JS y al hacer click avance y retroceda el slider. -->
+            <button class="Slider-icon Slider-next">
+                <svg class="Slider-svg" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z"/>
+                </svg>
+            </button>
+            <button class="Slider-icon Slider-prev">
+                <svg class="Slider-svg" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M9.224 1.553a.5.5 0 0 1 .223.67L6.56 8l2.888 5.776a.5.5 0 1 1-.894.448l-3-6a.5.5 0 0 1 0-.448l3-6a.5.5 0 0 1 .67-.223z"/>
+                </svg>
+            </button>
+<!-- Fila de puntos del slider - se pueden mover las imagenes con los puntos o con las flechas -->
+            <ul class="Slider-ul">
+                <li class="Slider-li">
+                    <button class="Slider-point isActive"></button>
+                </li>
+                <li class="Slider-li">
+                    <button class="Slider-point"></button>
+                </li>
+                <li class="Slider-li"><button class="Slider-point"></button></li>
+                <li class="Slider-li"><button class="Slider-point"></button></li>
+                <li class="Slider-li"><button class="Slider-point"></button></li>
+            </ul>    
+        </div>
+        
+<!-- Sección Grid galería donde se muestra el objetivo principal de la página y se genera la interacción con las Cards y asi dirigir a otro archivo HTML. -->
+        <div class="card-grid Grid" id="Ciudades">
+<!-- FIX: redibujar las etiquetas que contienen a quien para poder mejorar el error en la nomenclatura -->
+            <div class="Grid-title">
+                <h2 class="Grid-h2">Conociendo España</h2>
+            </div>    
+            <div class="Grid-wrapper">
+                <div class="Card">
+                    <div class="Card-content">
+                        <div class="Card-front Card-front--valencia">
+                            <h3 class="Card-h3">Valencia</h3>
+                        </div>
+                        <div class="Card-back">
+                            <span class="Card-text">Valencia se convirtió en la primera ciudad española en convertirse en destino Pet-friendly en el año 2019.</span>
+                            <button class="Card-button" title="Boton para ver mas contenido">
+                                <a href="ciudad1_V.html" class="Card-more">Ver más</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="Card">
+                    <div class="Card-content">
+                        <div class="Card-front Card-front--madrid">
+                            <h3 class="Card-h3">Madrid</h3>
+                        </div>
+                        <div class="Card-back">
+                            <span class="Card-text">Existen más de 300 hoteles que permiten la entrada de los caninos, incluso pueden entrar al Metro Madrid desde el año 2016.</span>
+                            <button class="Card-button" title="Boton para ver mas contenido">
+                                <a href="ciudad2_Md.html" class="Card-more" title="Ciudad Valencia">Ver más</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="Card">
+                    <div class="Card-content">
+                        <div class="Card-front Card-front--barcelona">
+                            <h3 class="Card-h3">Barcelona</h3>
+                        </div>
+                        <div class="Card-back">
+                            <span class="Card-text">Es uno de los lugares más permisivos para que los perros puedan entrar en restaurantes, establecimientos, apartamentos y hoteles.</span>
+                            <button class="Card-button"  title="Boton para ver mas contenido">
+                                <a href="index.html" class="Card-more" title="Ciudad Barcelona">Ver más</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="Card">
+                    <div class="Card-content">
+                        <div class="Card-front Card-front--bilbao">
+                            <h3 class="Card-h3">Bilbao</h3>
+                        </div>
+                        <div class="Card-back">
+                            <span class="Card-text">Cada vez son más los bares y restaurantes que permiten la entrada de perros en sus terrazas o incluso en el interior.</span>
+                            <button class="Card-button"  title="Boton para ver mas contenido">
+                                <a href="index.html" class="Card-more" title="Ciudad Bilbao">Ver más</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="Card">
+                    <div class="Card-content">
+                        <div class="Card-front Card-front--mallorca">
+                            <h3 class="Card-h3">Mallorca</h3>
+                        </div>
+                        <div class="Card-back">
+                            <span class="Card-text">Es la ciudad española con más perros por habitante. Hay una gran oferta de ocio perruno y también de destinos en calas</span>
+                            <button class="Card-button"  title="Boton para ver mas contenido">
+                                <a href="index.html" class="Card-more"title="Ciudad Mallorca">Ver más</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="Card">
+                    <div class="Card-content">
+                        <div class="Card-front Card-front--antequera">
+                            <h3 class="Card-h3">Antequera</h3>
+                        </div>
+                        <div class="Card-back">
+                            <span class="Card-text">Esta preciosa ciudad malagueña lleva desde finales de 2020 trabajando duro para convertirse en un auténtico destino Pet-friendly.</span>
+                            <button class="Card-button"  title="Boton para ver mas contenido">
+                                <a href="index.html" class="Card-more" title="Ciudad Antequera">Ver más</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="Card">
+                    <div class="Card-content">
+                        <div class="Card-front Card-front--gijon">
+                            <h3 class="Card-h3">Gijón</h3>
+                        </div>
+                        <div class="Card-back">
+                            <span class="Card-text">Primera población en España en obtener la distinción como Mejor Destino Dog-Friendlyven los Premios TravelGuau 2017</span>
+                            <button class="Card-button"  title="Boton para ver mas contenido">
+                                <a href="index.html" class="Card-more" title="Ciudad Gijón">Ver más</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="Card">
+                    <div class="Card-content">
+                        <div class="Card-front Card-front--ponferrada">
+                            <h3 class="Card-h3">Ponferrada</h3>
+                        </div>
+                        <div class="Card-back">
+                            <span class="Card-text">Fue declarada la ciudad más 'dog-friendly' en el año 2019. Un 35% de los alojamientos turísticos de la ciudad permiten animales </span>
+                            <button class="Card-button"  title="Boton para ver mas contenido">
+                                <a href="index.html" class="Card-more" title="Ciudad Ponferrada">Ver más</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="Card">
+                    <div class="Card-content">
+                        <div class="Card-front Card-front--malaga">
+                            <h3 class="Card-h3">Málaga</h3>
+                        </div>
+                        <div class="Card-back">
+                            <span class="Card-text">En 2017 el Pleno Municipal aprobó la Ordenanza Municipal de Bienestar y Protección Animal.</span>
+                            <button class="Card-button"  title="Boton para ver mas contenido">
+                                <a href="index.html" class="Card-more" title="Ciudad Málaga">Ver más</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+        </div>    
+
+    <!-- Sectión Testimonios donde diferentes usuarios comparten su opinion sobre la utildad que han encontrado en el contenido de la página web. -->
+        <div class="Testimonios" id="Comparte">
+            <section class="Testimonios-comentario">
+                <h2 class="Testimonios-title">Comparte tu experiencia</h2>
+                <div class="Testimonios-wrapper">
+                    <div class="Testimonios-container">
+                        <div class="Testimonios-usuario Usuario">
+                                <div class="Usuario-foto Usuario--lorenzo"></div>
+                                <h3 class="Usuario-h3">Lorenzo</h3>
+                                <span class="Usuario-span">Estuve 2 dias en Madrid y la conocer los lugares donde podia ir con mi mascota me fueron muy útiles.</span>
+                            <!-- svg de estrellas -->
+                        </div>
+                    </div>
+                    <div class="Testimonios-container">
+                        <div class="Testimonios-usuario Usuario">
+                                <div class="Usuario-foto Usuario--camila"></div>
+                                <h3 class="Usuario-h3">Camila</h3>
+                                <span class="Usuario-span">Con mi mejor amigo de 4 patas hemos hecho un Round Trip por algunas ciudades de España y hemos visitado varios restaurantes de esta página </span>
+                            <!-- svg de estrellas -->
+                        </div>
+                    </div>
+                    <div class="Testimonios-container">
+                        <div class="Testimonios-usuario Usuario ">
+                                <div class="Usuario-foto Usuario--nadia"></div>
+                                <h3 class="Usuario-h3">Nadia</h3>
+                                <span class="Usuario-span">Muy buena información para la gente que llega por primera vez a un lugar que no conoce.</span>
+                            <!-- svg de estrellas -->
+                        </div>
+                    </div>
+                    <div class="Testimonios-container">
+                        <div class="Testimonios-usuario Usuario ">
+                                <div class="Usuario-foto Usuario--alejandro"></div>
+                                <h3 class="Usuario-h3">Alejandro</h3>
+                                <span class="Usuario-span">Soy de Asturias pero viajé a Mallorca por un fin de semana y me sirvieron las recomendaciones, muchas gracias!</span>
+                            <!-- svg de estrellas -->
+                        </div>
+                    </div>
+                </div> 
+            </section>    
+        </div>
+
+<!-- Sección newsletter con input email para poder recibir actualizaciones y nueva información -->
+        <div class="Footer-Newsletter Newsletter">
+            <div class="Newsletter-wrapper">
+                <span class="Newsletter-span">Recibe guau noticias</span>
+                <form class="Newsletter-form" action="post" method="post" enctype="application/x-www-form-urlencoded">
+                    <label class="Newsletter-label" for="email">
+                        <input class="Newsletter-input" type="email" placeholder="Your e-mail" name="email">
+                        <button type="submit" class="Newsletter-button">
+                            <svg class="Newsletter-svg" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 3.178 4.995.002.002.26.41a.5.5 0 0 0 .886-.083l6-15Zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 0-.154-.154l-.338-.215 7.494-7.494 1.178-.471-.47 1.178Z"/>
+                            </svg>
+                        </button>
+                    </label>    
+                </form>
+            </div>    
+        </div>
+<!-- Sección pie de página con los respectivos links para redirigir. -->
+        <footer class="Footer">
+            <div class="Footer-wrapper"> 
+<!-- Logo con titulo en posicion absolute en el Footer. -->
+                <div class="Footer-logo">
+                    <img class="Footer-img" src="assets/Logo_0.webp" alt="logo para de un perro">
+                    <span class="Footer-title Footer-title--first">Trip<span class="Footer-title Footer-title--footer">guau</span>
+                    </span>
+                </div>
+
+<!-- Sacar los textos dentro de la etiqueta Footer-a para no hacer hover sobre ellas -->
+                <div class="Footer-info">
+                    <span class="Footer-column">
+<!-- TODO links que debería redirigir a enlaces internos de la pàgina. -->
+<!-- *Se podrióa poner un ul - li y cada li con un <a> o es mucho código?? -->
+                        <a  class="Footer-title" href="index.html" title="Items-footer">Próximos destinos
+                            <a class="Footer-line" href="index.html" title="Items-footer">Francia</a>
+                            <a class="Footer-line" href="index.html" title="Items-footer">Alemania</a>
+                            <a class="Footer-line" href="index.html" title="Items-footer">Croacia</a>
+                        </a>
+                    </span>
+                    <span class="Footer-column">
+<!-- En el proyecto de ser desarrollado deberia redirigir a un formulario de contacto o al email o mapa de la ciudad respectivamente -->
+                        <a class="Footer-title" href="index.html" title="Items-footer">Contáctanos
+                        <a class="Footer-line" href="index.html" title="Items-footer">Madrid, España</a>
+                        <a class="Footer-line" href="index.html" title="Items-footer">+34711895638</a>
+                        <a class="Footer-line" href="index.html" title="Items-footer">Tripguau@gmail.com</a>
+                        </a>
+                    </span>
+                    <span class="Footer-text">
+                        <a href="index.html" class="Footer-title" title="Items-footer">Sobre nosotros</a>
+                        <a href="index.html" class="Footer-title" title="Items-footer">Comunidad</a>
+                        <a href="index.html" class="Footer-title" title="Items-footer">Politicas de privacidad</a>
+                    </span>
+                </div>
+
+                <div class="Footer-media">
+                    <ul class="Footer-ul">
+                        <li class="Footer-li">                            
+                            <a href="index.html" class="Footer-rrss" title="Iconos rrss">
+                                <svg class="Footer-svg" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="Footer-li">
+                            <a href="index.html" class="Footer-rrss" title="Iconos rrss">
+                                <svg class="Footer-svg" xmlns="http://www.w3.org/2000/svg"  fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="Footer-li"> 
+                            <a href="index.html" class="Footer-rrss" title="Iconos rrss">
+                                <svg class="Footer-svg" xmlns="http://www.w3.org/2000/svg"  fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="Footer-li"> 
+                            <a href="index.html" class="Footer-rrss" title="Iconos rrss">
+                                <svg class="Footer-svg" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3V0Z"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="Footer-li"> 
+<!-- Link que redirige a mi perfil de Github  -->
+                            <a href="index.html" class="Footer-rrss" title="Iconos rrss">
+                                <svg class="Footer-svg" xmlns="http://www.w3.org/2000/svg" fill="currentColor"  viewBox="0 0 16 16">
+                                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>      
+            </div>
+        </footer>
+    </main>    
+
+</body>
+</html>

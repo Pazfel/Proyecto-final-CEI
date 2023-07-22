@@ -1,0 +1,242 @@
+<!-- Descripción: Este es el index de mi página web HTML donde se muestra el contenido principal.
+Estructura general:
+--Header
+-Barra de navegación
+-Contenido princial (Tabs home - tabs alojamientos - tabs restaurantes)
+-Footer o pie de página -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valencia</title>
+    <link rel="stylesheet" href="/css/stylesVal.css">
+    <script src="js/jsVal.js" defer></script>
+    <!-- Primary Meta Tags -->
+    <title>Tripguau - Pasea con tu mascota por España</title>
+    <meta name="title" content="Tripguau - Pasea con tu mascota por España" />
+    <meta name="description" content="Ciudades de España para viajar con toda tu familia incluyendo tus mascotas y toda la información que necesitas para hacer de tu viaje una experiencia increíble." />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://metatags.io" />
+    <meta property="og:title" content="Tripguau - Pasea con tu mascota por España" />
+    <meta property="og:description" content="Ciudades de España para viajar con toda tu familia incluyendo tus mascotas y toda la información que necesitas para hacer de tu viaje una experiencia increíble." />
+    <meta property="og:image" content="https://metatags.io/images/meta-tags.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://metatags.io" />
+    <meta property="twitter:title" content="Tripguau - Pasea con tu mascota por España" />
+    <meta property="twitter:description" content="Ciudades de España para viajar con toda tu familia incluyendo tus mascotas y toda la información que necesitas para hacer de tu viaje una experiencia increíble." />
+    <meta property="twitter:image" content="https://metatags.io/images/meta-tags.png" />
+    <!-- Meta Tags Generated with https://metatags.io -->
+</head>
+<body>
+
+<div id="Loading-section">
+    <div class="Loading-text">
+    <span class="Loading-title">Trip<span class="Loading-title Loading-title--part ">guau</span>
+    </span>
+    </div>
+    <!-- <img class="Loading-img" src="assets/Logo_0.png" alt="Huella de un perrito"> -->
+</div>
+
+
+<!-- Inicio del main de la web donde se desarrolla el contenido principal de esta. -->
+    <main class="Main">   
+<!--Header y menú de navegación como primera estructura de la web. -->
+        <header class="Header">
+            
+            <div class="Header-wrapper">
+                <button class="Header-button" title="Logo de la página">
+                    <svg class="Header-svg" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                    </svg>
+                </button>
+                <h1 class="Header-h1">
+                    <a class="Header-a" href="index.html" title="Redirige al home de la web">
+                        <span class="Header-title">Trip<span class="Header-title Header-title--part ">guau</span>
+                        </span>
+                        <img class="Header-img" src="assets/Logo_0.webp" alt="Huella de un perrito">
+                    </a>
+                </h1>
+<!-- Class isActive cuando se ejecuta con JS hace que cuando se hace responsive aparece y desaparece al hacer click -->
+                <nav class="Header-nav isActive">
+                    <ul class="Header-ul">
+                        <li class="Header-li">
+<!-- Se agregan ID en el href para hacer scroll behavior smooth dentro de la misma página. -->
+                            <a class="Header-link" href="#Galeria" title="Dirige a la seccion del Slider de la web">Galeria</a>
+                            </li>
+                        <li class="Header-li">
+                            <a class="Header-link" href="#Ciudades" title="Dirige a la seccion del Grid de la web">Ciudades</a>
+                        </li>
+                        <li class="Header-li">
+                            <a class="Header-link" href="#Comparte" title="Dirige a la seccion de Testimonios de la web">Comparte</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+
+<!-- Sección de tabs para mostrar el contenido de la web ( se les dará interacción con JS.) -->
+        <div class="Tabs">
+            <ul class="Tabs-row">
+                <li class="Tabs-li">
+                    <button class="Tabs-button">Conociendo la ciudad</button>
+                </li>
+                <li class="Tabs-li">
+                    <button class="Tabs-button">Alojamiento</button>
+                </li>
+                <li class="Tabs-li">
+                    <button class="Tabs-button">Restaurantes</button>
+                </li>
+            </ul>
+                <div class="Tabs-row  Tabs-div">
+                    <section class="Tabs-content isActive">
+                            <h3 class="Tabs-h3">Valencia</h3>
+                        <div class="Tabs-lowpart">
+                            <img class="Tabs-img" src="assets/Valencia1.jpeg" alt="Foto panorámica de Valencia">
+                            <span class="Tabs-main">Valencia se convirtió en la primera ciudad española en convertirse en destino pet-friendly en el año 2019. El ayuntamiento decidió poner en marcha una campaña conocida como "viajar juntos es mejor" y puso a disposición de los ciudadanos la web Valencia Pet Friendly con el objetivo de dar a conocer las alternativas de ocio y alojamiento disponibles en la ciudad donde los animales son bienvenidos.
+                            </span>
+                        </div>
+                        <div class="Tabs-iframe Iframe">
+                            <h3 class="Iframe-h3">Ven a conocernos</h3>
+<!-- Se agrega in iframe de Google con la intención de mostrar la zona de España de que trata el documento (TODO hacer un mapa con iconos ) -->
+                            <iframe class="Iframe-map" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d98557.30719667912!2d-0.4219363363913514!3d39.47122973186923!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2ses!4v1689673146946!5m2!1ses!2ses" width="500" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </section>
+
+                <div class="Tabs-info">
+                    <section class="Tabs-content">
+                            <h3 class="Tabs-subtitle">Sea You Apartamentos</h3>
+                        <div class="Tabs-place">    
+                            <span class="Tabs-text">Admitimos cualquier tipo de perro y otros animales de compañía. En las habitaciones disponemos de comederos y bebederos para las mascotas. Existen zonas comunes de acceso libre con la mascota (siempre atado) además de las habitaciones. Puedes contratar el servicio de mascota a través de nuestra web por tan solo un coste de 10€/día.</span>
+                            <span class="Tabs-text">El proyecto, inspirado en diversas urbanizaciones de la Costa Azul en Francia y la Riviera en Italia, principalmente Port Grimaud en el golfo de Saint Tropez, consistió en construir un puerto o dársena rodeada de viviendas individuales en las que cada vecino pudiera tener su barco atracado en la puerta de su casa</span>
+                            <a class="Tabs-web" href="https://www.portsaplaya.com/" target="_blank" rel="noreferrer">Quédate con nosotros</a>
+                        </div>
+                            
+                            <h3 class="Tabs-subtitle">Casual vintage</h3>
+                        <div class="Tabs-place">    
+                            <span class="Tabs-text">Tiene unas muy buenas instalaciones para las mascotas.El peso máximo por mascota es de 35 kg, pagando un suplemento de 10€/noche. No se puede dejar sola.</span>
+                            <span class="Tabs-text">Ofrece wifi gratuito en todas sus áreas, habitaciones con TV por satélite y baño privado. Además de todo esto, cuenta con servicio de recepción 24 horas.</span>
+                            <a class="Tabs-web" href="https://www.casualhoteles.com/en/casual-vintage-valencia.html" target="_blank" rel="noreferrer">Quédate con nosotros</a>
+                        </div>  
+                            
+                            <h3 class="Tabs-subtitle">The Wesrtin Valencia</h3>
+                        <div class="Tabs-place">
+                                <span class="Tabs-text">Westin Hotels & Resorts da la bienvenida a perros medianos y pequeños, ofreciéndoles el lujo y la comodidad de una cama comfortable para perros de felpa y servicios especiales, sin cargo alguno.Se aceptan mascotas de hasta 30 kg con un cargo no reembolsable de 30 EUR por habitación y día</span>
+                                <span class="Tabs-text">Westin se toma en serio el disfrute. Más que una buena noche de sueño y una comida sana, Westin promueve un estilo de vida comprometido. Si tiene familia, le darán una Guía de Actividades Locales y un Diario Familiar Westin. Si desea perseguir el bienestar, pueden ofrecerle una serie de retiros centrados en el bienestar que incluyen fitness, yoga running y mucho más</span>
+                                <a class="Tabs-web" href="https://www.marriott.com/en-us/hotels/vlcwi-the-westin-valencia/overview/?scid=f2ae0541-1279-4f24-b197-a979c79310b0" target="_blank" rel="noreferrer">Quédate con nosotros</a>
+                        </div>
+                    </section>
+                </div>    
+<!-- Sección con restaurantes en esta ciudad de España con sus respwectivos links externos. -->
+                <div class="Tabs-info">
+                    <div class="Tabs-content">
+                        <h3 class="Tabs-subtitle"> La Fábrica de Huellas</h3>
+                    <div class="Tabs-place">  
+                        <span class="Tabs-text Tabs-text--food">Es un lugar único en Valencia donde puedes venir con tu perro y tomarte algo rico junto a él o disfrutar de la compañía gatuna en La Casa de los Gatos, donde vive una colonia felina en adopción.</span>
+                        <a class="Tabs-web" href="www.lafabricadehuellas.com" target="_blank" rel="noreferrer">Ven con tu mascota</a>
+                    </div> 
+                        <h3 class="Tabs-subtitle">Bastard Coffe and Kitchen</h3>
+                    <div class="Tabs-place">  
+                        <span class="Tabs-text Tabs-text--food">Es un local situado cerca de la zona universitaria,hablamos de unos de los restaurantes dogfriendly más interesantes de Valencia que combina a la perfección lo mejor la cocina mediterránea y estadounidense. De hecho, su principal atractivo son sus desayunos, brunch y meriendas,.</span>
+                        <a class="Tabs-web" href="https://www.instagram.com/bastardocoffee/?hl=cs" target="_blank" rel="noreferrer">Ven con tu mascota</a>
+                    </div> 
+                        <h3 class="Tabs-subtitle">Las Adelitas Calle Bélgica</h3>
+                    <div class="Tabs-place">  
+                        <span class="Tabs-text Tabs-text--food">Es un restaurante pet-friendly donde ofrecen Auténtica gastronomía mexicana, cócteles especiales y un ambiente único en nuestros restaurantes Las Adelitas. ¡Te invitamos a compartir con nosotros un día a la mexicana!
+                        </span>
+                        <a class="Tabs-web" href="https://las-adelitas-belgica.makro.rest/?lang=es" target="_blank" rel="noreferrer">Ven con tu mascota</a>
+                    </div> 
+
+                    <video autoplay preload="none" class="Tabs-video" src="https://www.youtube.com/watch?v=JTMhC3Op2eA" ></video>
+                    </div>
+                </div>
+            </div> 
+        </div>
+
+        <footer class="Footer">
+            <div class="Footer-wrapper"> 
+<!-- Logo con titulo en posicion absolute en el Footer. -->
+                <div class="Footer-logo">
+                    <img class="Footer-img" src="assets/Logo_0.webp" alt="logo pata perruno">
+                    <span class="Footer-title Footer-title--first">Trip<span class="Footer-title Footer-title--footer">guau</span>
+                    </span>
+                </div>
+
+<!-- Sacar los textos dentro de la etiqueta Footer-a para no hacer hover sobre ellas -->
+                <div class="Footer-info">
+                    <span class="Footer-column">
+<!-- TODO links que debería redirigir a enlaces internos de la pàgina. -->
+<!-- *Se podrióa poner un ul - li y cada li con un <a> o es mucho código?? -->
+                        <a  class="Footer-title" href="index.html" title="Items-footer">Próximos destinos
+                            <a class="Footer-line" href="index.html" title="Items-footer">Francia</a>
+                            <a class="Footer-line" href="index.html" title="Items-footer">Alemania</a>
+                            <a class="Footer-line" href="index.html" title="Items-footer">Croacia</a>
+                        </a>
+                    </span>
+                    <span class="Footer-column">
+<!-- En el proyecto de ser desarrollado deberia redirigir a un formulario de contacto o al email o mapa de la ciudad respectivamente -->
+                        <a class="Footer-title" href="index.html" title="Items-footer">Contáctanos
+                        <a class="Footer-line" href="index.html" title="Items-footer">Madrid, España</a>
+                        <a class="Footer-line" href="index.html" title="Items-footer">+34711895638</a>
+                        <a class="Footer-line" href="index.html" title="Items-footer">Tripguau@gmail.com</a>
+                        </a>
+                    </span>
+                    <span class="Footer-text">
+                        <a href="index.html" class="Footer-title" title="Items-footer">Sobre nosotros</a>
+                        <a href="index.html" class="Footer-title" title="Items-footer">Comunidad</a>
+                        <a href="index.html" class="Footer-title" title="Items-footer">Politicas de privacidad</a>
+                    </span>
+                </div>
+
+                <div class="Footer-media">
+                    <ul class="Footer-ul">
+                        <li class="Footer-li">                            
+                            <a href="index.html" class="Footer-rrss" title="Iconos rrss">
+                                <svg class="Footer-svg" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="Footer-li">
+                            <a href="index.html" class="Footer-rrss" title="Iconos rrss">
+                                <svg class="Footer-svg" xmlns="http://www.w3.org/2000/svg"  fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="Footer-li"> 
+                            <a href="index.html" class="Footer-rrss" title="Iconos rrss">
+                                <svg class="Footer-svg" xmlns="http://www.w3.org/2000/svg"  fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="Footer-li"> 
+                            <a href="index.html" class="Footer-rrss" title="Iconos rrss">
+                                <svg class="Footer-svg" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3V0Z"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="Footer-li"> 
+<!-- Link que redirige a mi perfil de Github  -->
+                            <a href="index.html" class="Footer-rrss" title="Iconos rrss">
+                                <svg class="Footer-svg" xmlns="http://www.w3.org/2000/svg" fill="currentColor"  viewBox="0 0 16 16">
+                                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>      
+            </div>
+        </footer>
+    </main>    
+</body>
+</html>

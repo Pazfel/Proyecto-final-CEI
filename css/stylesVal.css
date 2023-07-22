@@ -1,0 +1,659 @@
+
+/* Style.css 
+    Reset para normalizar las etiquetas
+    Variables en el root de color
+    Definido en el body la tipografia 
+    Se desarrolla el archivo en el mismo orden del html
+        header
+        Tabs
+        iframe
+        Contenido Tabs
+        Footer
+        Responsive en 3 medidas (pantallas normales, tablets y móviles) */
+
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1, h2, h3, h4, h5, h6, strong{
+    font-size: inherit;
+    font-weight: inherit;
+}
+li {list-style: none;}
+a{
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+p a{
+    display: inline;
+}
+img, video, iframe{
+    display: block;
+    max-width: 100% ;
+    width: 100%;
+}
+svg{
+    display: block;
+    fill: currentColor;
+}
+body{
+    height:180vh;
+    font-family: 'DM Sans', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Work Sans', sans-serif;
+    background: #cdd3c7db;
+}
+:root{
+
+    /* Colores en variables de la web*/
+    --darkgreencolor: #384933;
+    --coralcolor: #ff6d4e;
+    --orangecolor: #ffb06f;
+    --greencolor: #929f89;
+    --cremecolor: #fbe9d5; 
+
+    /* Border radius en variables en las dos medidas usadas en la web */
+    --borderRadius-one: 1rem;
+    --borderRadius-two: 2rem;
+}
+
+/* #Loading-section{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: var(--darkgreencolor);
+    transform: all .5s ease;
+} */
+.Loading-text{
+    /* display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    transform: scale(1.2); */
+}
+.Loading.logo{}
+/* .Loading.img{
+    width: 100%;
+    height: 5rem;
+    max-height: fit-content;
+    filter: invert(53%) sepia(100%) saturate(56%) hue-rotate(52deg) brightness(96%) contrast(88%);
+} */
+.Loading-title{
+    /* width: 100%; */
+    /* font-family: 'Playfair Display', serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: var(--cremecolor);
+    font-size: 10rem;
+    transform: translate(-50% , -50%); */
+    /* animation: loadingTitle 2s ease-in-out; */
+    /* transform: scale(2); */
+    /* animation: loadingScale 2s ease; */
+}
+/* .Loading-title--part {
+    color: var(--coralcolor);
+    position: relative;
+    left: 0;
+    top: 0;
+}
+.Footer{
+    display: none;
+} */
+/* .Header{
+    position: static;
+} */
+
+@keyframes loadingTitle{
+    from{
+        transform: rotate(0deg);
+        /* transform: scale(0); */
+    }
+    to{
+        transform: rotate(360deg);
+        /* transform: scale(2); */
+    }
+}
+@keyframes loadingScale{
+    from{
+        /* transform: rotate(0deg); */
+        transform: scale(0);
+    }
+    to{
+        /* transform: rotate(360deg); */
+        transform: scale(2);
+    }
+}
+
+
+
+
+
+/*Header y Nav*/
+/* Se agrega el position fixed para que el menu se quede fijo en el borde superior de la página */
+/* Se usa la propiedad z-index para que se sobreponga a otras etiquetas */
+.Header{
+    width: 100%;
+    /* height: 100%; */
+    background-color: var(--darkgreencolor);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1rem;
+}
+/* Icono hamburguesa que se esconde para la versión ordenador */
+.Header-button{
+    display: none;
+    width: 2rem;
+    height: 2rem;
+    /* padding: 1rem; */
+    background-color: transparent;
+    /* background-color: gray; */
+}
+.Header-wrapper{
+    width: 90%;
+    /* background-color: blue; */
+    margin: auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.Header-a{
+    width: 3.2rem;
+    height: 3.2rem;
+    margin: 1rem;
+    position: relative;
+}
+.Header-nav{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+/* Se usa el position absolute para que se superponga a la imagen y a su segunda parte darle relative y queden al lado */
+.Header-title{
+    /* width: 100%; */
+    font-family: 'Playfair Display', serif;
+    position: absolute;
+    top: 10%;
+    left: 60%;
+    color: var(--cremecolor);
+    font-size: 2rem;
+    z-index: 1;
+}
+.Header-title--part {
+    color: var(--coralcolor);
+    position: relative;
+    top: 0;
+    left: 0;
+}
+.Header-img{
+    width: 100%;
+    max-height: fit-content;
+    filter: invert(53%) sepia(100%) saturate(56%) hue-rotate(52deg) brightness(96%) contrast(88%);
+}
+.Header-ul{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5rem
+}
+/* Se usa la propiedad borde transparente para evitar que salte el link cuando hacemos hover por el espesor del mismo */
+.Header-link{
+    font-size: 1.2em;
+    font-weight: 500;
+    color: var(--cremecolor);
+    border-bottom: 2px solid transparent;
+    font-family: 'Playfair Display', serif;
+    text-transform: uppercase;
+    
+}
+/* Cuando hacemos hover sobre los links del nav aparece el borde inferior */
+.Header-link:hover{
+    border-bottom: .125rem solid var(--cremecolor);
+}
+.Header-link:active{
+    border-bottom: .125rem solid var(--coralcolor);
+}
+
+
+.Tabs{
+    width: 90%;
+    margin: 10rem auto;
+    /* background-color: lightblue; */
+}
+.Tabs-div{
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+}
+.Tabs-row{
+    /* width: 100%; */
+    /* background-color: #ff6d4e; */
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+/* FIX: refaccionar las etiquetas para centrar todo y que tengan el mismo width */
+.Tabs-li{
+    /* width: calc(100% / 3); */
+    margin: 2rem auto; 
+}
+.Tabs-button{
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    color: var(--cremecolor);
+    background-color: var(--darkgreencolor);
+    border-radius: var(--borderRadius-one);
+    padding: 1rem;
+    border-bottom: .125rem solid transparent;
+    /* margin: 2rem auto; */
+}
+.Tabs-button.isActive{
+    border-bottom: .1875rem solid var(--coralcolor);
+}
+.Tabs-content{
+    width: 90%;
+    background-color: var(--greencolor);
+    padding: 1.5rem;
+    border-radius: var(--borderRadius-two);
+    display: none;
+}
+.Tabs-content.isActive{
+    width: 100%;
+    display: block;
+    /* background-color: lime; */
+}
+.Tabs-img{
+    width: 70%;
+    /* height: 16rem; */
+    border-radius: var(--borderRadius-two);
+}
+
+.Tabs-h3{
+    width: 80%;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-family: 'Playfair Display', serif;
+    margin: 2rem auto ;
+    color: var(--cremecolor);
+    border-bottom: .0625rem solid var(--coralcolor);
+}
+.Tabs-subtitle{
+    font-size: 1.5rem;
+    font-family: 'Playfair Display', serif;
+    margin: 4rem 0 1rem 0;
+    color: var(--cremecolor);
+    text-transform: uppercase;
+
+}
+.Tabs-text{
+    width: calc(100% / 3);
+    color: var(--cremecolor);
+    font-size: 1.2em;
+    font-weight: 300;
+    letter-spacing: .0313rem;
+}
+.Tabs-text--food{
+    width: 60%;
+}
+.Tabs-main{
+    color: var(--cremecolor);
+    font-size: 1em;
+    font-weight: 300;
+    letter-spacing: .0313rem;
+}
+.Tabs-lowpart{
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content:flex-start;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.Tabs-place{
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content:center;
+    align-items: center;
+    gap: 5rem;
+}
+.Tabs-web{
+    color: var(--cremecolor);
+    background-color: var(--darkgreencolor);
+    border: .125rem solid var(--cremecolor);
+    padding: 1rem;
+    border-radius: 1rem;
+    font-size: .9em;
+}
+.Tabs-web:hover{
+    background-color: var(--greencolor);
+}
+.Tabs-web:active{
+    background-color: var(--coralcolor);
+    color: var(--darkgreencolor);
+}
+
+/* Mapa con iframe, insertado en la web */
+.Iframe{
+    width: 100%;
+}
+.Iframe-h3{
+    width: 100%;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-family: 'Playfair Display', serif;
+    margin: 5rem 0 3rem 0;
+    color: var(--cremecolor);
+    border-bottom: .0625rem solid var(--coralcolor);
+}
+.Iframe-map{
+    border-radius: var(--borderRadius-two);
+    margin-bottom: 2rem;
+}
+/* Sección pie de página con enlaces, iconos y logo*/
+.Footer{
+    width: 100%;
+    background-color: var(--greencolor);
+}
+.Footer-wrapper{
+    width: 85%;
+    /* background-color: aquamarine; */
+    margin: auto;
+    position: relative;
+    padding: .4rem;
+}
+.Footer-logo{
+    width: 11rem;
+    /* background-color: gray; */
+    position: absolute;
+    left: 85%;
+    bottom: 77%;
+}
+.Footer-img{
+    width: 100%;
+    max-height: fit-content;
+    filter: invert(65%) sepia(8%) saturate(609%) hue-rotate(52deg) brightness(94%) contrast(88%);
+    transform: rotateZ(324deg);
+}
+.Footer-info{
+    width: 100%;
+    /* background-color: pink; */
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 8rem;
+    margin: 1rem;
+    color: var(--cremecolor);
+}
+.Footer-title:hover,
+.Footer-line:hover{
+    color: var(--coralcolor);
+}
+.Footer-title:active,
+.Footer-line:active{
+    color: var(--darkgreencolor);
+}
+.Footer-column{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    margin: 1.5rem;
+}
+.Footer-line{
+    font-weight: 200;
+    font-size: 1em;
+}
+.Footer-text{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    margin: 1.5rem;
+}
+.Footer-ul{
+    /* background-color: cadetblue; */
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.Footer-li{
+    /* width: 40%; */
+    margin: 0 0 3rem 3rem;
+    border: .0625rem solid var(--cremecolor);
+    padding: .5rem;
+    border-radius: var(--borderRadius-one);
+}
+/* Al hacer hover cambia el color indicando al usario que puede interactuar con el */
+.Footer-li:hover{
+    border: .0625rem solid var(--coralcolor);
+}
+.Footer-li:active{
+    border: 1px solid var(--darkgreencolor);
+}
+.Footer-svg{
+    width: 1.3rem ;
+    color: var(--cremecolor); 
+}
+/* Al hacer hover cambia el color indicando al usario que puede interactuar con el */
+.Footer-svg:hover{
+    color: var(--coralcolor);
+}
+.Footer-svg:active{
+    color: var(--darkgreencolor);
+}
+/* Se usa position absolute para que el logo de la web quede sobre la imagen y el color de fondo   */
+/* FIX: buscar la forma corresta de modo de evitar que se desplace de manera que debamos hacer muchos responsives y no controlemos su posición */
+.Footer-title--first{
+    font-family: 'Playfair Display', serif;
+    position: absolute;
+    top: 12rem;
+    right: 0rem;
+    color: var(--cremecolor);
+    font-size: 3.5rem;
+    z-index: 1;
+}    
+/* El modificador va con psition relative ya que debe ir al lado de la etiqueta Title-firs */
+.Footer-title--footer {
+    font-size: 3.5rem;
+    color: var(--coralcolor);
+    position: relative;
+    top: 0;
+    left: 0;
+}    
+
+
+/* RESPONSIVE */
+
+@media (max-width: 1100px){
+    .Header-li{
+        /* width: 80%; */
+        font-size: .9em;
+    }
+    
+    .Tabs-lowpart{
+        /* width: 100%; */
+        flex-direction: column;
+        margin: auto;
+    }
+    .Tabs-text{
+        font-size: 1rem;
+    }
+    .Tabs-img{
+        width: 100%;
+    }
+    .Footer-logo{
+        width: 16rem;
+    }
+    .Footer-info{
+        gap:0
+    }
+    .Footer-a{
+        font-size: .9rem;
+    }
+    .Footer-line{
+        font-size: .8em;
+    }
+    .Footer-img{
+        position: absolute;
+        left: -3rem;
+        bottom: 0;
+        width: 10rem;
+    }
+    .Footer-title--first{
+        font-size: 2rem;
+        left: 0rem;
+        top:0;
+    }
+    .Footer-title--footer{
+        font-size: 2rem;
+    }
+    .Footer-li{
+        margin: 0 0 1em 3em;
+        padding: .4em;
+    }
+}
+
+
+@media (max-width:850px){
+    /* Poner display none al header y que aparezca el menu hamburguesa desde los 880px */
+    .Header-nav{
+        display: none;
+        width: 100%;
+        /* height: 100%; */
+    }
+    .Header-nav.isActive{
+        display: block;
+    }
+    .Header-ul{
+        flex-direction: column;
+        gap: 3rem;
+    }
+    .Header-link{
+        top: 7rem
+    }
+    .Header-button{
+        display: block; 
+        margin-left: 4rem;
+        width: 3rem;
+        color: var(--coralcolor);
+    }
+    .Tabs-row{
+        flex-direction: column;
+        gap:0;
+        justify-content: flex-start;
+    }
+    .Tabs-content.isActive{
+        margin: auto;
+    }
+    .Footer-info{
+        width: 100%;
+        flex-direction: column;
+    }
+    .Footer-svg{
+        width: 1rem;
+    }
+    .Footer-ul{
+        width: 70%;
+        margin: 0 0 1rem 1rem;
+    }
+    .Footer-img{
+        position: absolute;
+        left: -5.5rem;
+        bottom: 5rem;
+        width: 9rem;
+    }
+    .Footer-title--first{
+        font-size: 2.7rem;
+        left: -7rem;
+        top:-6rem;
+    }
+    .Footer-title--footer{
+        font-size: 2.7rem;
+    }
+}
+
+
+
+@media (max-width: 480px){
+    .Header-nav{
+        /* width: 100%; */
+        /* transform: translateY(-100%); */
+    }
+    .Header-title{
+        display: none;
+    }
+    .Header-img{
+        display: none;
+    }
+    .Header-nav.isActive{
+        display: block;
+    }
+    .Header-wrapper{
+        width: 100%;
+    }
+    .Header-ul{
+        width: 50%;
+        flex-direction: column;
+    }
+    .Tabs{
+        width: 90%;
+    }
+    .Tabs-place{
+        font-size: 1rem;
+        display: block;
+    }
+    .Tabs-web{
+        margin: 2rem auto 1rem;
+        text-align: center;
+    }
+    .Tabs-li{
+        margin: 1rem auto;
+    }
+    .Tabs-row{
+        gap:0;
+    }
+    .Tabs-subtitle{
+        font-size: 1.2rem;
+    }
+    .Tabs-text--food{
+        width: 80%;
+        margin: 1rem ;
+    }
+    .Footer-img{
+        display: none;
+    }
+/* FIX: entender que es lo que genera un scroll lateral en el modo movil con esta etiqueta */
+    .Footer-title--first{
+        display: none;
+    }
+    .Footer-li{
+        width: 90%;
+        margin: 0 0 1rem 1rem;
+    }
+
+}
